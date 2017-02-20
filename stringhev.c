@@ -9,21 +9,27 @@ int main(){
 
   initscr();
   
+  curs_set(0);
+
   move(15, 4);
   addstr("1 stringa");
-  nanosleep(&time, NULL);
   refresh();
+  nanosleep(&time, NULL);
+  
 
   move(10, 20);
   addstr("2 stringa");
-  nanosleep(&time, NULL);
   refresh();
+  nanosleep(&time, NULL);
+  
 
   move(5, 4);
   addstr("3 stringa");
+  refresh();
   nanosleep(&time, NULL);
 
-  refresh();
+  move(18,15);
+  addstr("Inserisci un tasto per continuare:");
   getch();
 
   endwin();
